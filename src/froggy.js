@@ -23,10 +23,10 @@
 let nb_hand_gauche = 0;
 
 function froggy(a, b, prevSong = "") {
-    if (a == "ear" && a != "hand" && a != "foot") {
-        if (b == "left")
+    if (a === "ear" && a !== "hand" && a !== "foot") {
+        if (b === "left")
             return "Coaaaa... Coaaaaaa";
-        else if (b != "left") {
+        else if (b === "right") {
             const song = "C'était un crapaud, qui s'appelait Fee-Fye\n" +
                 "C'était un crapaud près d'un ruisseau\n" +
                 "Qui s'laissait traîner les pattes à l'eau\n" +
@@ -62,10 +62,10 @@ function froggy(a, b, prevSong = "") {
 
             return song;
         }
-    } else if (a == "hand") {
-        if (b == 'left')
+    } else if (a === "hand") {
+        if (b === "left")
             return;
-        else if (b === "right" && a === "hand") {
+        else if (b === "right") {
             let listeSongs = ["Je suis une grenouille !", "J'adore la pluie !", "Tu aimes les bisous de grenouille ?"]
             let NumberGauche = listeSongs.indexOf(prevSong);
             if (NumberGauche === 0) {
@@ -80,7 +80,7 @@ function froggy(a, b, prevSong = "") {
                 return "Je suis une grenouille !"
         }
     } else {
-        if (a == "foot") {
+        if (a === "foot") {
             if (b === "left")
                 return "Hahaha, ça chatouille !"
             else if (b === "right") {
