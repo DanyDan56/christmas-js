@@ -23,7 +23,22 @@
  *
  */
 function littleChemist(mixture) {
-   // CODE HERE !
+   // violette
+   if(mixture.redMixture && mixture.blueMixture && !mixture.greenMixture && !mixture.yellowMixture)
+      return "Waaa, la mixture devient solide !";
+   // orange
+   else if(mixture.redMixture && mixture.yellowMixture && !mixture.greenMixture && !mixture.blueMixture)
+      return "Hahahahaha, mais pourquoi je rigole ! Hahahaha !";
+   // verte
+   else if(mixture.greenMixture && !mixture.redMixture )
+      return "Hum, ça sent bon !";
+   // primaire
+   else if(((mixture.redMixture && !mixture.blueMixture && !mixture.yellowMixture) ||
+            (!mixture.redMixture && mixture.blueMixture && !mixture.yellowMixture) ||
+            (!mixture.redMixture && !mixture.blueMixture && mixture.yellowMixture)) && !mixture.greenMixture)
+      return "Il ne se passe rien...";
+   else
+      return "Tous aux abris, ça va exploser !";
 }
 
 export { littleChemist };

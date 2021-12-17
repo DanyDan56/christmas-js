@@ -9,7 +9,7 @@
  *
  */
 function magicGarage(vehicle) {
-    // Code here !
+    return `Bravo, tu viens de réparer ${vehicle.prefix} ${vehicle.type} ${vehicle.color} !`;
 }
 
 export { magicGarage };
